@@ -1,5 +1,5 @@
 require 'sinatra'
-require_relative "user.rb"
+require_relative "models.rb"
 
 enable :sessions
 
@@ -34,12 +34,12 @@ end
 
 
 post "/register" do
-	name = params [:name] #added dec3
+	#name = params [:name] #added dec3
 	email = params[:email]
 	password = params[:password]
 
 	u = User.new
-	u.owner_name = name
+	#u.owner_name = name
 	u.email = email.downcase
 	u.password =  password
 	u.save
