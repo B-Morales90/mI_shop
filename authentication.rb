@@ -46,7 +46,7 @@ post "/register" do
 
 	session[:user_id] = u.id
 
-	erb :"authentication/successful_signup"
+	erb :"authentication/successfully_signup"
 
 end
 
