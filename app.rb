@@ -33,6 +33,7 @@ end
 	i.description = params["description"]
 	i.quantity = params["quantity"].to_i
 	i.price = params["price"].to_i
+	return output# added to display data to table
 	i.save
 	redirect "/item_list"
 
@@ -54,6 +55,7 @@ get "/delete item" do
  		if i != nil
   		i.destroy
  		end
+ 		redirect "/item_list" # added to stay on display table
 end
 
 
